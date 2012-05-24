@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Youtube Video Gallery</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/yt-video-gallery.js"></script>
+<link rel="stylesheet" type="text/css" href="css/yt-video-gallery.css" media="screen" />
+</head>
+<body>
+
+<div id="ytVideoGallery"></div>
+
+<script type="text/javascript">
+$(function() {
+	$('#ytVideoGallery').ytVideoGallery({
+		feedUrl: 'https://gdata.youtube.com/feeds/api/standardfeeds/US/top_rated_Comedy',
+		playerOptions: {
+			rel: '0',
+			wmode: 'opaque'
+		},
+		playerWidth: 595,
+		playerHeight: 363
+	});
+});
+</script>
+</body>
+</html>
